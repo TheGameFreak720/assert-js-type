@@ -1,0 +1,19 @@
+{
+  "name": "assert-js-type",
+  "version": "1.0.0",
+  "description": "A simple function that takes an array of data types and checks if your data matches any of those types ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheGameFreak720/assert-type.git"
+  },
+  "author": "Luis Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheGameFreak720/assert-type/issues"
+  },
+  "homepage": "https://github.com/TheGameFreak720/assert-type#readme"
+}
