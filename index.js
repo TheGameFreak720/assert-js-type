@@ -13,9 +13,11 @@ export default function(types, data) {
     const isArray = Array.isArray(data);
 
     if (isArray && types.indexOf('array') !== -1) {
-      return true
+      return true;
+    } else if (data === NaN && types.indexOf(data) !== -1) {
+      return true;
     } else if (data === null && types.indexOf(data) !== -1) {
-      return true
+      return true;
     } else if (types.indexOf(typeof data) !== -1) {
       return true;
     } else {
