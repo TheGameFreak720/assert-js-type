@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheGameFreak720/assert-type.git"
+    "url": "git+https://github.com/TheGameFreak720/assert-js-type.git"
   },
   "author": "Luis Alvarez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheGameFreak720/assert-type/issues"
+    "url": "https://github.com/TheGameFreak720/assert-js-type/issues"
   },
-  "homepage": "https://github.com/TheGameFreak720/assert-type#readme"
+  "homepage": "https://github.com/TheGameFreak720/assert-js-type#readme"
 }
