@@ -10,11 +10,13 @@ export default function(types, data) {
   } else if (!types.length) {
     return new Error('types must have a length');
   } else {
-    const lowerCaseTypes = types.map(type => type.toLowerCase());
     const isArray = Array.isArray(data);
-    if (isArray && lowerCaseTypes.indexOf('array') !== -1) {
+
+    if (isArray && types.indexOf('array') !== -1) {
       return true
-    } else if (lowerCaseTypes.indexOf(typeof data) !== -1) {
+    } else if (data === null && types.indexOf(data) !== -1) {
+      return true
+    } else if (types.indexOf(typeof data) !== -1) {
       return true;
     } else {
       return false;
