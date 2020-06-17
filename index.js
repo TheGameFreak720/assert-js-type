@@ -10,7 +10,11 @@ export default function(types, data) {
   } else if (!types.length) {
     return new Error('types must have a length');
   } else {
-    if (types.indexOf(typeof data) !== -1) {
+    const types = types.map(type => type.toLowerCase());
+    const isArray = Array.isArray(data);
+    if (isArray && types.indexOf('array') !== -1) {
+      return true
+    } else if (types.indexOf(typeof data) !== -1) {
       return true;
     } else {
       return false;
