@@ -4,7 +4,7 @@
  * @param  data - data to check the type of.
  * @returns {boolean} if the typeof data matches any type will return true. If not it will return false
  */
-export default function(types, data) {
+function assert(types, data) {
   if (!Array.isArray(types)) {
     return new Error('types must be an array');
   } else if (!types.length) {
@@ -14,7 +14,7 @@ export default function(types, data) {
 
     if (isArray && types.indexOf('array') !== -1) {
       return true;
-    } else if (data === NaN && types.indexOf(data) !== -1) {
+    } else if (isNaN(data) && types.indexOf(data) !== -1) {
       return true;
     } else if (data === null && types.indexOf(data) !== -1) {
       return true;
@@ -24,4 +24,6 @@ export default function(types, data) {
       return false;
     }
   }
-};
+}
+
+exports.assert = assert;
